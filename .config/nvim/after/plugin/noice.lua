@@ -15,6 +15,10 @@ require("noice").setup({
                     { find = "; after #%d+" },
                     { find = "; before #%d+" },
                     { find = "fewer lines" },
+                    { find = "lines <ed"},
+                    { find = "lines >ed"},
+                    { find = "lines indented"},
+
                 },
             },
             opts = { skip = true },

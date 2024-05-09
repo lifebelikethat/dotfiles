@@ -1,8 +1,14 @@
+local function isRecording ()
+  local reg = vim.fn.reg_recording()
+  if reg == "" then return "" end -- not recording
+  return "recording to " .. reg
+end
+
 require("lualine").setup {
   options = {
     icons_enabled = true,
     theme = "nightfly",
---     component_separators = { left = "", right = ""},
+    component_separators = { left = "", right = ""},
     section_separators = { left = "", right = ""},
     disabled_filetypes = {
       statusline = {},
@@ -19,17 +25,27 @@ require("lualine").setup {
   },
   sections = {
     lualine_a = {"mode"},
-    lualine_b = {"branch", "diff", "diagnostics"},
+    lualine_b = {
+        {
+            "branch",
+            color = "darkcyan",
+            section_separator = ">",
+        },
+    },
     lualine_c = {
         {
             "filetype",
             colored = true,
             icon_only = true,
-            padding = { right = 0, left = 1 }
+            padding = { right = 0, left = 1 },
+            separator = "",
         },
         {
             "filename",
-            padding = { left = 0 }
+            padding = { left = 0, right = 1 },
+        },
+        {
+            isRecording,
         },
     },
     lualine_x = {

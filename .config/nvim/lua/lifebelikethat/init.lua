@@ -4,6 +4,7 @@ require("autoclose").setup()
 vim.o.number = true
 vim.o.termguicolors = true
 vim.o.cursorline = true
+vim.o.cursorlineopt = 'screenline'
 vim.o.relativenumber = true
 vim.o.guicursor = 'n-c-v-sm:block'
 vim.o.laststatus = 3
@@ -25,3 +26,7 @@ vim.opt.shortmess = vim.opt.shortmess + {
     W = false, -- Do not show "written" in command line when writing
     I = true, -- Do not show intro message when starting Vim
 }
+
+vim.api.nvim_command('autocmd BufEnter * set cursorline')
+vim.api.nvim_command('autocmd BufLeave * set nocursorline')
+
