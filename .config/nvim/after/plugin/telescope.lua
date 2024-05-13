@@ -11,6 +11,7 @@ telescope.setup {
         file_ignore_patterns = {
             "node_modules",
             "venv",
+            ".git",
         },
         path_display={"truncate"},
         sorting_strategy = "ascending",

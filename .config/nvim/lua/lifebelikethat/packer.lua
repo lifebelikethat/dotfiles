@@ -78,9 +78,9 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
 
     -- prettier
-    use 'jose-elias-alvarez/null-ls.nvim'
+    -- use 'jose-elias-alvarez/null-ls.nvim'
     -- use 'MunifTanjim/prettier.nvim'
-    use 'fsouza/prettierd'
+    -- use 'fsouza/prettierd'
 
     -- snippet engine
     use 'L3MON4D3/LuaSnip'
@@ -88,5 +88,14 @@ return require('packer').startup(function(use)
     -- html boilerplate
     use 'mattn/emmet-vim'
     use 'alvan/vim-closetag'
+
+    -- journal
+    use {
+        'jakobkhansen/journal.nvim',
+        config = function()
+            require('journal').setup()
+        end
+    }
+
 end)
 

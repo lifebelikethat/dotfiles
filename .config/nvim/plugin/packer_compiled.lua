@@ -119,6 +119,12 @@ _G.packer_plugins = {
     path = "/home/ian/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["journal.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fjournal\frequire\0" },
+    loaded = true,
+    path = "/home/ian/.local/share/nvim/site/pack/packer/start/journal.nvim",
+    url = "https://github.com/jakobkhansen/journal.nvim"
+  },
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "/home/ian/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
@@ -168,11 +174,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ian/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/home/ian/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   nvim = {
     loaded = true,
@@ -229,11 +230,6 @@ _G.packer_plugins = {
     path = "/home/ian/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  prettierd = {
-    loaded = true,
-    path = "/home/ian/.local/share/nvim/site/pack/packer/start/prettierd",
-    url = "https://github.com/fsouza/prettierd"
-  },
   ["telescope-cmdline.nvim"] = {
     loaded = true,
     path = "/home/ian/.local/share/nvim/site/pack/packer/start/telescope-cmdline.nvim",
@@ -283,6 +279,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: journal.nvim
+time([[Config for journal.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fjournal\frequire\0", "config", "journal.nvim")
+time([[Config for journal.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")

@@ -4,6 +4,10 @@ require'nvim-treesitter.configs'.setup {
   "regex", "markdown_inline",
   },
 
+  indent = {
+      enable = true,
+  },
+
   auto_tag = {
       enable = true,
   },

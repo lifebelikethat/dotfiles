@@ -28,7 +28,12 @@ require("lualine").setup {
     lualine_b = {
         {
             "branch",
-            color = "darkcyan",
+            color = {
+                -- bg = "#62628e",
+                bg = "#4d536b",
+                fg = "normal",
+                -- gui = "bold",
+            },
             section_separator = ">",
         },
     },
